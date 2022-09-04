@@ -41,12 +41,12 @@ router.get('/minigames/1', (req, res) => {
     res.sendFile(__path + '/views/pingpong.html')
 })
 
-router.get('/minigames/3', (req, res) => {
-    res.sendFile(__path + '/views/2dsonic.html')
-})
-
 router.get('/minigames/2', (req, res) => {
     res.sendFile(__path + '/views/tembaklingkaran.html')
+})
+
+router.get('/minigames/3', (req, res) => {
+    res.sendFile(__path + '/views/sonicrun.html')
 })
 
 
