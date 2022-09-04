@@ -4,7 +4,7 @@
 <img src="https://avatars.githubusercontent.com/u/93582939?v=4" width="200" height="200" style/>
 </p>
 <p align="center">
-  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=Welcome+To+Rest+Api+Zero+" alt="">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=Welcome+To+ZeroOne+API" alt="">
 </p>
 <p align="center">
 <a href="#"><img title="Creator" src="https://img.shields.io/badge/Creator-Bintang1302-red.svg?style=for-the-badge&logo=github"></a>
@@ -13,7 +13,7 @@
 * ## TUTORIAL 📌
 
 Forks Github Ini
- [`Klik Sini Untuk Fork Project`](https://github.com/zeroonecraft/ZeroAPI/fork)<br>
+ [`Klik Sini Untuk Fork Project`](https://github.com/zeroonecraft/ZeroOne-API/fork)<br>
 
 DEPLOY TO HEROKU
 
@@ -32,7 +32,7 @@ add website kamu
 * ## SETTING ⚙️
 File Setting ``setting.js``
 
-[`Tukar Nama Creator`](https://github.com/zeroonecraft/ZeroAPI/blob/main/settings.js)<br>
+[`Tukar Nama Creator`](https://github.com/zeroonecraft/ZeroOne-API/blob/main/settings.js)<br>
 
 * ## FEATURE LIST 💡
 
