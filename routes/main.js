@@ -37,16 +37,16 @@ router.get('/docs', (req, res) => {
     res.sendFile(__path + '/view/docs.html')
 })
 
-router.get('/1', (req, res) => {
-    res.sendFile(__path + '/views/pingpong.html')
+router.get('/pingpong', (req, res) => {
+    res.sendFile(__path + '/view/pingpong.html')
 })
 
-router.get('/22', (req, res) => {
-    res.sendFile(__path + '/views/tembaklingkaran.html')
+router.get('/tembaklingkaran', (req, res) => {
+    res.sendFile(__path + '/view/tembaklingkaran.html')
 })
 
-router.get('/3', (req, res) => {
-    res.sendFile(__path + '/views/sonicrun.html')
+router.get('/sonicrun', (req, res) => {
+    res.sendFile(__path + '/view/sonicrun.html')
 })
 
 
