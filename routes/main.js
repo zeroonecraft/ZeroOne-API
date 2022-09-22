@@ -37,17 +37,8 @@ router.get('/docs', (req, res) => {
     res.sendFile(__path + '/view/docs.html')
 })
 
-router.get('/pingpong', (req, res) => {
+router.get('/minigame', (req, res) => {
     res.sendFile(__path + '/view/pingpong.html')
 })
-
-router.get('/tembaklingkaran', (req, res) => {
-    res.sendFile(__path + '/view/tembaklingkaran.html')
-})
-
-router.get('/sonicrun', (req, res) => {
-    res.sendFile(__path + '/view/sonicrun.html')
-})
-
 
 module.exports = router
