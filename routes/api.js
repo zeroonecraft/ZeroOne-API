@@ -2069,6 +2069,25 @@ router.get('/islamic/tafsirsurah', async (req, res, next) => {
  res.json(loghandler.error)
 
 })
+
+//―――――――――――――――――――――――――――――――――――――――――― ┏  Cek ID Game  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
+
+router.get('api/cekid/ff', async (req, res, next) => {
+            var id = req.query.id
+            
+    if (!id) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter id"})
+
+       fetch(encodeURI(`https://alquran-apiii.vercel.app/surah/${surah}/${ayat}`))
+        .then(response => response.json())
+        .then(data => {
+		var result = data;
+			res.json({
+				result
+			})
+		})
+         .catch(e => {
+         	res.json(loghandler.error)
+})})
 })
 
 module.exports = router
