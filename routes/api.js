@@ -1048,16 +1048,6 @@ router.get('/randomgambar/technology', async (req, res, next) => {
 		}
 	})
 })
-//―――――――――――――――――――――――――――――――――――――――――― ┏  Nsfw ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
-
-router.get('/nsfw/ahegao', async (req, res, next) => {
-
-	let cyberspace = await fetchJson('https://raw.githubusercontent.com/KazukoGans/database/main/nsfw/ahegao.json')
-	let random = cyberspace[Math.floor(Math.random() * cyberspace.length)]
-	var result = await getBuffer(random.result)
-	res.set({'Content-Type': 'image/jpg'})
-	res.send(result)
-})
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Game  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 router.get('/game/tebakgambar', async (req, res, next) => {
