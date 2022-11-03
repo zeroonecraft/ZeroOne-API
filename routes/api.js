@@ -2072,7 +2072,7 @@ router.get('/islamic/tafsirsurah', async (req, res, next) => {
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Cek ID Game  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
-router.get('api/cekid/ff', async (req, res, next) => {
+router.get('/cekid/ff', async (req, res, next) => {
             var id = req.query.id
             
     if (!id) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter id"})
