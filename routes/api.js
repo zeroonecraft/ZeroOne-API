@@ -1051,19 +1051,12 @@ router.get('/randomgambar/technology', async (req, res, next) => {
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Nsfw ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 router.get('/nsfw/ahegao', async (req, res, next) => {
-  const ahegao = JSON.parse(fs.readFileSync(__path +'/data/nsfw/ahegao.json'));
-  const randahegao = ahegao[Math.floor(Math.random() * ahegao.length)];
-  data = await fetch(randahegao).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/ahegao.jpeg', data)
-  res.sendFile(__path +'/tmp/ahegao.jpeg')
-})
 
-router.get('/nsfw/ass', async (req, res, next) => {
-  const ahegao = JSON.parse(fs.readFileSync(__path +'/data/nsfw/ass.json'));
-  const randahegao = ahegao[Math.floor(Math.random() * ahegao.length)];
-  data = await fetch(randahegao).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/ass.jpeg', data)
-  res.sendFile(__path +'/tmp/ass.jpeg')
+	let cyberspace = await fetchJson('https://raw.githubusercontent.com/KazukoGans/database/main/nsfw/ahegao.json')
+	let random = cyberspace[Math.floor(Math.random() * cyberspace.length)]
+	var result = await getBuffer(random.result)
+	res.set({'Content-Type': 'image/jpg'})
+	res.send(result)
 })
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Game  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
