@@ -1051,7 +1051,7 @@ router.get('/randomgambar/technology', async (req, res, next) => {
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Nsfw ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 router.get('/nsfw/ahegao', async (req, res, next) => {
-	const ahegao = JSON.parse(fs.readFileSync(__path +'/data/ahegao.json'));
+	const ahegao = JSON.parse(fs.readFileSync(__path +'/data/nsfw/ahegao.json'));
   const randahegao = ahegao[Math.floor(Math.random() * ahegao.length)];
   data = await fetch(randahegao).then(v => v.buffer())
   await fs.writeFileSync(__path +'/tmp/ahegao.jpeg', data)
