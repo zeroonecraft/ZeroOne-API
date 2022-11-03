@@ -2077,7 +2077,7 @@ router.get('api/cekid/ff', async (req, res, next) => {
             
     if (!id) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter id"})
 
-       fetch(encodeURI(`https://alquran-apiii.vercel.app/surah/${surah}/${ayat}`))
+       fetch(encodeURI(`https://api.gifan.id/trueID/freeFire/?id=${id}`))
         .then(response => response.json())
         .then(data => {
 		var result = data;
