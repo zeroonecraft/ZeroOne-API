@@ -17,15 +17,13 @@ const { runtime,fetchJson } = require('../lib/myfunc')
 
 router.get('/statistic', async (req, res, next) => {
 
-	let hits = await fetchJson('https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/docs')
-        let hite = await fetchJson('https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/api')
+	let hits = await fetchJson('https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor')
 
 	res.json({
 	status: true,
 	creator: `${creator}`,
 	runtime: runtime(process.uptime()),
 	visitor: hits.value,
-        request: hite.value,
 
 	})
 
