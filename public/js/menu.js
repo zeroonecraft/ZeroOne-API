@@ -43,8 +43,8 @@ var x = setInterval(function() {
     var distance = countDownDate - now;
 
     // Kalkulator Waktu Hari, Jam, Menit, Detik 
-    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4,34524));
-    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4,34524)) / (1000 * 60 * 60 * 24 * 7));
+    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4.34524));
+    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.34524)) / (1000 * 60 * 60 * 24 * 7));
     var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
