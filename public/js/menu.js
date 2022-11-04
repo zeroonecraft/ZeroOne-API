@@ -43,20 +43,20 @@ var x = setInterval(function() {
     var distance = countDownDate - now;
 
     // Kalkulator Waktu Hari, Jam, Menit, Detik 
-    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4.34524));
-    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.34524)) / (1000 * 60 * 60 * 24 * 7));
+    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4));
+    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4)) / (1000 * 60 * 60 * 24 * 7));
     var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Menampilkan Hasil Di Dalam element Menggunakan id="time"
-    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + week + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds + "";
+    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + week + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds + "" + "(1 bulan = 28 hari))";
 
     // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("jadwaltime").innerHTML = "End";
+        document.getElementById("jadwaltime").innerHTML = "Error...";
     }
 }, 1000);
 
