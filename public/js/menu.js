@@ -31,7 +31,7 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
 
 //count Time
 
-var countDownDate = new Date("Jul 10, 2022 00:00:00").getTime();
+var countDownDate = new Date("November 10, 2022 00:00:00").getTime();
 
 // Update Hitungan Mundur Setiap 1 Detik
 var x = setInterval(function() {
@@ -54,7 +54,7 @@ var x = setInterval(function() {
     // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("jadwaltime").innerHTML = "Berakhir";
+        document.getElementById("jadwaltime").innerHTML = "End";
     }
 }, 1000);
 
