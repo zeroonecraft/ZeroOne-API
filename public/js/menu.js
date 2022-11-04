@@ -30,32 +30,48 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
 })
 
 //count Time
-
-var countDownDate = new Date("December 31, 2022 00:00:00").getTime();
+// January | February | March | April | May | June | July | August | September | October | November | December
+var atahun = new Date("November 4, 2022 00:21:30").getTime();
+var btahun = new Date("November 4, 2022 00:21:40").getTime();
 
 // Update Hitungan Mundur Setiap 1 Detik
-var x = setInterval(function() {
+var a = setInterval(function() {
 
     // Mengambil Tanggal Dan Waktu
     var now = new Date().getTime();
 
     // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+    var distance = atahun - now;
 
     // Kalkulator Waktu Hari, Jam, Menit, Detik 
-    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4));
-    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4)) / (1000 * 60 * 60 * 24 * 7));
+    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4.34524));
+    var weeks = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.34524)) / (1000 * 60 * 60 * 24 * 7));
     var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Menampilkan Hasil Di Dalam element Menggunakan id="time"
-    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + week + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds + "" + "  (1 bulan = 28 hari)";
+    document.getElementById("jadwaltime").innerHTML = months + " Bulan  " + weeks + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds;
 
     // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
     if (distance < 0) {
-        clearInterval(x);
+        setInterval(b);
+    }
+}, 1000);
+
+var b = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = btahun - now;
+    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4.34524));
+    var weeks = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.34524)) / (1000 * 60 * 60 * 24 * 7));
+    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("jadwaltime").innerHTML = months + " Bulan  " + weeks + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds;
+    if (distance < 0) {
+        clearInterval(b);
         document.getElementById("jadwaltime").innerHTML = "Error...";
     }
 }, 1000);
