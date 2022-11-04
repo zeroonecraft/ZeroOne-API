@@ -31,7 +31,7 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
 
 //count Time
 
-var countDownDate = new Date("December 4, 2022 00:00:00").getTime();
+var countDownDate = new Date("December 31, 2022 00:00:00").getTime();
 
 // Update Hitungan Mundur Setiap 1 Detik
 var x = setInterval(function() {
