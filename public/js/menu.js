@@ -31,7 +31,7 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
 
 //count Time
 
-var countDownDate = new Date("November 10, 2022 00:00:00").getTime();
+var countDownDate = new Date("December 4, 2022 00:00:00").getTime();
 
 // Update Hitungan Mundur Setiap 1 Detik
 var x = setInterval(function() {
@@ -43,13 +43,15 @@ var x = setInterval(function() {
     var distance = countDownDate - now;
 
     // Kalkulator Waktu Hari, Jam, Menit, Detik 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4));
+    var week = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4)) / (1000 * 60 * 60 * 24 * 7));
+    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Menampilkan Hasil Di Dalam element Menggunakan id="time"
-    document.getElementById("jadwaltime").innerHTML = days + " Hari  " + hours + ":" + minutes + ":" + seconds + "";
+    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + days + " Hari  " + hours + ":" + minutes + ":" + seconds + "";
 
     // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
     if (distance < 0) {
