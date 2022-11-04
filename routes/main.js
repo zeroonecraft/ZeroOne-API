@@ -41,4 +41,8 @@ router.get('/minigame', (req, res) => {
     res.sendFile(__path + '/view/pingpong.html')
 })
 
+router.get('/about', (req, res) => {
+    res.sendFile(__path + '/view/about.html')
+})
+
 module.exports = router
