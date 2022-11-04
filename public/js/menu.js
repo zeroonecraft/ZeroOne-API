@@ -25,7 +25,7 @@
 
 //Visit
 
-$.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", function(response) {
+$.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/docs", function(response) {
     $("#visitor").text(response.value);
 })
 
