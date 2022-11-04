@@ -29,13 +29,6 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/docs", functio
     $("#visitor").text(response.value);
 })
 
-//Request
-
-$.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/api", function(response) {
-    $("#request").text(response.value);
-})
-
-
 //count Time
 
 var countDownDate = new Date("Jul 10, 2022 00:00:00").getTime();
