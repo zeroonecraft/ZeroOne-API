@@ -51,7 +51,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Menampilkan Hasil Di Dalam element Menggunakan id="time"
-    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + week + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds + "" + "(1 bulan = 28 hari))";
+    document.getElementById("jadwaltime").innerHTML = month + " Bulan  " + week + " Minggu  " +days + " Hari  " + hours + ":" + minutes + ":" + seconds + "" + "  (1 bulan = 28 hari)";
 
     // Ketika countdown timer sudah berakhir Maka Tulisan Berakhir
     if (distance < 0) {
