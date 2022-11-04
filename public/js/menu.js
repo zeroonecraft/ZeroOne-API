@@ -29,6 +29,12 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
     $("#visitor").text(response.value);
 })
 
+//Request
+
+$.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/api", function(response) {
+    $("#request").text(response.value);
+})
+
 
 //count Time
 
