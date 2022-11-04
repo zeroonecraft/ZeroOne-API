@@ -31,7 +31,7 @@ $.getJSON("https://api.countapi.xyz/hit/zeroone-api.herokuapp.com/visitor", func
 
 //count Time
 // January | February | March | April | May | June | July | August | September | October | November | December
-var atahun = new Date("November 4, 2022 00:21:30").getTime();
+var atahun = new Date("November 4, 2022 00:21:35").getTime();
 var btahun = new Date("November 4, 2022 00:21:40").getTime();
 
 // Update Hitungan Mundur Setiap 1 Detik
